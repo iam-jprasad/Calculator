@@ -24,6 +24,11 @@ division () {
 		        d=$(($1/$2))
 			        echo $d
 			}
+multiplication () {
+				        echo "The result of multiply " + $1 + " and " + $2 + " is:"
+					        d=$(($1*$2))
+						        echo $d
+						}
 if [[ "$1" = "a" ]]
 then
         addition $2 $3
@@ -35,6 +40,10 @@ then
 elif [[ "$1" = "d" ]]
 then
 	        division $2 $3
+		        exit 0
+elif [[ "$1" = "m" ]]
+then
+	        multiplication $2 $3
 		        exit 0
 else
         echo "Usage:"
