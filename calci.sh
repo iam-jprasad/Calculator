@@ -50,3 +50,4 @@ else
         echo "Please enter a/s/m/d and two integers"
         exit 1
 fi
+anything else
