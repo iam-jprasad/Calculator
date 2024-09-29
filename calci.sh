@@ -14,10 +14,19 @@ addition () {
         d=$(($1 + $2))
         echo $d
 }
+subtraction () {
+	echo "The result of subtracting " + $2 + " and " + $3 + " is:"
+	d=$(($1-$2))
+	echo $d
+}
 if [[ "$1" = "a" ]]
 then
         addition $2 $3
         exit 0
+elif [[ "$1" = "s" ]]
+then
+	subtraction $2 $3
+	exit 0
 else
         echo "Usage:"
         echo "Please enter a/s/m/d and two integers"
